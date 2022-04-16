@@ -8,7 +8,7 @@ enum type { animation, feature };
 struct film {
 	void* obj = NULL;
 	type key;
-
+	string country = "";
 };
 
 struct Node {
