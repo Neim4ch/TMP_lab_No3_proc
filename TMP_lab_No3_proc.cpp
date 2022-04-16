@@ -1,6 +1,5 @@
 // TMP_lab_No3_proc.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-
 #include "Source.h"
 using namespace std;
 int main(int argc, char* argv[])
