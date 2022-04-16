@@ -20,8 +20,8 @@ struct feature_film {
 	string director = "";
 };
 
-enum way { DRAWN, DOLL, STOP_MOTION };
-struct animation_film {
+enum way { DRAWN, DOLL, STOP_MOTION }; \
+	struct animation_film {
 	way woc;
 };
 
@@ -40,3 +40,4 @@ film* OutFilm(ifstream& ifst);
 void Clear(container* c);
 void InCont(ifstream& ifst, container* c);
 void OutCont(ofstream& ofst, container* c);
+void OutFeature(ofstream& ofst, container* c);
