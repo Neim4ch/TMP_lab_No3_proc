@@ -8,7 +8,7 @@ enum type { animation, feature };
 struct film {
 	void* obj = NULL;
 	type key;
-
+	string name = "";
 };
 
 struct Node {
@@ -40,3 +40,7 @@ film* OutFilm(ifstream& ifst);
 void Clear(container* c);
 void InCont(ifstream& ifst, container* c);
 void OutCont(ofstream& ofst, container* c);
+
+//int countVowel(feature_film& f);
+//int countVowel(animation_film& a);
+int countVowel(film& fl);

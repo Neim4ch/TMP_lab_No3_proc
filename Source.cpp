@@ -43,6 +43,7 @@ film* InFilm(ifstream& ifst) {
 	animation_film* a;
 	int k = 0;
 	ifst >> k;
+	ifst >> fl->name;
 	switch (k) {
 	case 1:
 		fl->key = feature;
@@ -69,6 +70,7 @@ film* InFilm(ifstream& ifst) {
 }
 
 void OutFilm(ofstream& ofst, film& f) {
+	ofst << "This is \"" << f.name << "\". ";
 	if (f.key == feature)
 	{
 		feature_film* pf;
@@ -122,7 +124,20 @@ void OutCont(ofstream& ofst, container* c) {
 	{
 		ofst << i << ": ";
 		OutFilm(ofst, *(c->curr->fl));
+		ofst << "Number of vowels = " << countVowel(*(c->curr->fl)) << endl;
 		c->curr = c->curr->next;
 		i++;
 	}
+}
+
+string vowels = "aeiouyAEIOUY";
+
+int countVowel(film& fl)
+{
+	int cnt = 0;
+	for (int i = 0; i < fl.name.length(); i++)
+	{
+		if (vowels.find(fl.name[i]) < vowels.length())cnt++;
+	}
+	return cnt;
 }
