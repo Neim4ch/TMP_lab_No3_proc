@@ -25,8 +25,8 @@ struct documentary_film {
 	int year = 0;
 };
 
-enum way { DRAWN, DOLL, STOP_MOTION };
-struct animation_film {
+enum way { DRAWN, DOLL, STOP_MOTION }; \
+	struct animation_film {
 	way woc;
 	string name = "";
 };
@@ -55,3 +55,5 @@ int countVowel(film& fl);
 
 bool cmpVowels(film* f1, film* f2);
 void Sort(container& c);
+
+void OutFeature(ofstream& ofst, container* c);
