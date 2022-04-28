@@ -9,6 +9,7 @@ struct film {
 	void* obj = NULL;
 	type key;
 	string country = "";
+	string name = "";
 };
 //asd
 struct Node {
@@ -18,7 +19,6 @@ struct Node {
 
 struct feature_film {
 	string director = "";
-	string name = "";
 };
 
 struct documentary_film {
@@ -28,7 +28,6 @@ struct documentary_film {
 enum way { DRAWN, DOLL, STOP_MOTION }; \
 	struct animation_film {
 	way woc;
-	string name = "";
 };
 
 struct container {
