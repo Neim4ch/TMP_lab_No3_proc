@@ -8,7 +8,7 @@ enum type { animation, feature, documentary };
 struct film {
 	void* obj = NULL;
 	type key;
-
+	string country = "";
 };
 //asd
 struct Node {
